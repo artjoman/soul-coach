@@ -1,0 +1,26 @@
+.header {
+    background: linear-gradient(360deg, #005C80 0%, #00415A 110.75%, #00415A 113.09%, #F4B461 113.1%, #00415A 113.1%);
+    height: 120px;
+}
+
+.logo-image {
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.logo-container {
+text-align: center;
+}
+
+.welcome-of-the-day-opaque {
+    color: rgba(255, 255, 255, 0.59);
+}
+
+.welcome-of-the-day {
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 25px;
+
+    color: white;
+    margin-left: 35px;
+}

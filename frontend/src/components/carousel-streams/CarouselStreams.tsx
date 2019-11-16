@@ -9,12 +9,12 @@ const settings = {
     dots: true,
     infinite: true,
     centerMode: true,
-    slidesToShow: 4,
+    slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 4000,
     arrows: true,
-    adaptiveHeight: true,
+    adaptiveHeight: false,
     responsive: [
         {
             breakpoint: 768,
@@ -22,7 +22,7 @@ const settings = {
                 arrows: false,
                 centerMode: true,
                 centerPadding: '40px',
-                slidesToShow: 3
+                slidesToShow: 1
             }
         },
         {
@@ -44,7 +44,7 @@ class CarouselStreams extends Component {
             <div className="dashboard-carousel-streams">
                 <ReactSlick {...settings}>
                     <div>
-                        <img src={require('../../assets/images/stream1.jpg')} alt="" />
+                        <img src={require('../../assets/images/stream-card.png')} alt="" />
                     </div>
                     <div>
                         <img src={require('../../assets/images/stream2.jpg')} alt="" />

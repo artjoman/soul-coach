@@ -11,7 +11,7 @@ class SidebarMenu extends Component {
     render() {
         // NOTE: You also need to provide styles, see https://github.com/negomi/react-burger-menu#styling
         return (
-            <Menu>
+            <Menu customBurgerIcon={<img src={require('../../assets/images/menu.svg')} />}>
                 <a className="menu-item" href="/">
                     Dashboard
                 </a>

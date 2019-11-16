@@ -3,14 +3,13 @@ import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Dashboard from './pages/dashboard/Dashboard';
-import SidebarMenu from './components/sidebar-menu/SidebarMenu';
+import Header from './components/header/Header';
 import Stream from './pages/stream/Stream';
 
 function AppRouter() {
   return (
     <div className="App">
-      <SidebarMenu>
-      </SidebarMenu>
+      <Header></Header>
       <Router>
         <div className="container-fluid">
           <Route path="/" exact component={Dashboard} />
@@ -23,3 +22,4 @@ function AppRouter() {
 }
 
 export default AppRouter;
+
