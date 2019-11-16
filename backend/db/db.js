@@ -73,4 +73,38 @@ var UserProperties = Conn.define('userProperties', {
     }
 })
 
+var Streams = Conn.define('streams', {
+    streamId: {
+        type: Sequelize.INTEGER,
+        allowNull: true,
+        primaryKey: true,
+        autoIncrement: true,
+        primaryKey: !0
+    },
+    communityId: {
+        type: Sequelize.INTEGER,
+        allowNull: true
+    },
+    consultantId: {
+        type: Sequelize.INTEGER,
+        allowNull: true
+    },
+    streamLink: {
+        type: Sequelize.STRING,
+        allowNull: false
+    },
+    name: {
+        type: Sequelize.STRING,
+        allowNull: false
+    },
+    description: {
+        type: Sequelize.STRING,
+        allowNull: false
+    },
+    active: {
+        type: Sequelize.STRING,
+        allowNull: true
+    }
+})
+
 module.exports = Conn;

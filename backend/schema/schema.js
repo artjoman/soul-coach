@@ -89,6 +89,57 @@ const UserProperties = new GraphQLObjectType({
         }
 })
 
+const Streams = new GraphQLObjectType({
+    name: 'streams',
+    description: 'Stream object',
+    fields: () => {
+        return {
+                streamId: {
+                    type: GraphQLInt,
+                    resolve (streams) {
+                        return streams.streamId;
+                    }
+                },
+                consultantId: {
+                    type: GraphQLInt,
+                    resolve (streams) {
+                        return streams.consultantId
+                    }
+                },
+                communityId: {
+                    type: GraphQLInt,
+                    resolve (streams) {
+                        return streams.communityId
+                    }
+                },
+                streamLink: {
+                    type: GraphQLString,
+                    resolve (streams) {
+                        return streams.streamLink
+                    }
+                },
+                name: {
+                    type: GraphQLString,
+                    resolve (streams) {
+                        return streams.name
+                    }
+                },
+                description: {
+                    type: GraphQLString,
+                    resolve (streams) {
+                        return streams.description
+                    }
+                },
+                active: {
+                    type: GraphQLString,
+                    resolve (streams) {
+                        return streams.active
+                    }
+                }
+            }
+        }
+})
+
 const Mutation = new GraphQLObjectType ({
     name: 'mutation',
     description: 'Data update functions',
@@ -228,6 +279,23 @@ var Query = new GraphQLObjectType({
                 },
             resolve (root, args) {
             return db.models.userProperties.findAll({ where: args });
+            }
+        },
+        streams: {
+            type: new GraphQLList(Streams),
+            args: {
+                consultantId: {
+                    type: GraphQLInt
+                    },
+                streamId: {
+                    type: GraphQLInt
+                    },
+                communityId: {
+                    type: GraphQLInt
+                    }
+                },
+            resolve (root, args) {
+            return db.models.streams.findAll({ where: args });
             }
         }
     }
