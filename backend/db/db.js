@@ -107,4 +107,74 @@ var Streams = Conn.define('streams', {
     }
 })
 
+var Languages = Conn.define('languages', {
+    languageId: {
+        type: Sequelize.INTEGER,
+        allowNull: true,
+        primaryKey: true,
+        autoIncrement: true,
+        primaryKey: !0
+    },
+    name: {
+        type: Sequelize.STRING,
+        allowNull: true
+    },
+    active: {
+        type: Sequelize.STRING,
+        allowNull: true
+    }
+})
+
+var Communities = Conn.define('communities', {
+    communityId: {
+        type: Sequelize.INTEGER,
+        allowNull: true,
+        primaryKey: true,
+        autoIncrement: true,
+        primaryKey: !0
+    },
+    languageId: {
+        type: Sequelize.INTEGER,
+        allowNull: true
+    },
+    userId: {
+        type: Sequelize.INTEGER,
+        allowNull: true
+    },
+    name: {
+        type: Sequelize.STRING,
+        allowNull: true
+    },
+    description: {
+        type: Sequelize.STRING,
+        allowNull: true
+    },
+    image: {
+        type: Sequelize.STRING,
+        allowNull: true
+    },
+    active: {
+        type: Sequelize.STRING,
+        allowNull: true
+    }
+})
+
+var Consultants = Conn.define('consultans', {
+    consultantId: {
+        type: Sequelize.INTEGER,
+        allowNull: true,
+        primaryKey: true,
+        autoIncrement: true,
+        primaryKey: !0
+    },
+    user: Users,
+    community: Communities,
+    active: {
+        type: Sequelize.STRING,
+        allowNull: true
+    },
+
+})
+
+
 module.exports = Conn;

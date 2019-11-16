@@ -140,6 +140,88 @@ const Streams = new GraphQLObjectType({
         }
 })
 
+const Communities = new GraphQLObjectType({
+    name: 'communities',
+    description: 'Communitites object',
+    fields: () => {
+        return {
+                communityId: {
+                    type: GraphQLInt,
+                    resolve (communities) {
+                        return communities.communityId;
+                    }
+                },
+                languageId: {
+                    type: GraphQLInt,
+                    resolve (communities) {
+                        return communities.languageId
+                    }
+                },
+                userId: {
+                    type: GraphQLInt,
+                    resolve (communities) {
+                        return communities.userId
+                    }
+                },
+                name: {
+                    type: GraphQLString,
+                    resolve (communities) {
+                        return communities.name
+                    }
+                },
+                description: {
+                    type: GraphQLString,
+                    resolve (communities) {
+                        return communities.description
+                    }
+                },
+                image: {
+                    type: GraphQLString,
+                    resolve (communities) {
+                        return communities.image
+                    }
+                },
+                active: {
+                    type: GraphQLString,
+                    resolve (communities) {
+                        return communities.active
+                    }
+                }
+            }
+        }
+})
+
+const Consultants = new GraphQLObjectType({
+    name: 'consultants',
+    description: 'Consultant object',
+    fields: () => {
+        return {
+                consultantId: {
+                    type: GraphQLInt,
+                    resolve (communities) {
+                        return communities.communityId;
+                    }
+                },
+                user: Users,
+                community: Communities,
+                user: {
+                    type: Users,
+                    resolve (
+                        
+                    ) {
+                        return Users
+                    }
+                },
+                active: {
+                    type: GraphQLString,
+                    resolve (communities) {
+                        return communities.active
+                    }
+                }
+            }
+        }
+})
+
 const Mutation = new GraphQLObjectType ({
     name: 'mutation',
     description: 'Data update functions',
@@ -296,6 +378,17 @@ var Query = new GraphQLObjectType({
                 },
             resolve (root, args) {
             return db.models.streams.findAll({ where: args });
+            }
+        },
+        communities: {
+            type: new GraphQLList(Communities),
+            args: {
+                languageId: {
+                    type: GraphQLInt
+                    }
+                },
+            resolve (root, args) {
+            return db.models.communities.findAll({ where: args });
             }
         }
     }
