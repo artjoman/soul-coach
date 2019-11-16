@@ -198,17 +198,13 @@ const Consultants = new GraphQLObjectType({
         return {
                 consultantId: {
                     type: GraphQLInt,
-                    resolve (communities) {
-                        return communities.communityId;
+                    resolve (consultants) {
+                        return consultants.communityId;
                     }
                 },
-                user: Users,
-                community: Communities,
                 user: {
                     type: Users,
-                    resolve (
-                        
-                    ) {
+                    resolve (users) {
                         return Users
                     }
                 },
@@ -389,6 +385,17 @@ var Query = new GraphQLObjectType({
                 },
             resolve (root, args) {
             return db.models.communities.findAll({ where: args });
+            }
+        },
+        consultants: {
+            type: new GraphQLList(Consultants),
+            args: {
+                communityId: {
+                    type: GraphQLInt
+                    }
+                },
+            resolve (root, args) {
+            return db.models.consultants.findAll({ where: args });
             }
         }
     }
