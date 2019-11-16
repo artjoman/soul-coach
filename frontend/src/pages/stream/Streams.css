@@ -21,6 +21,41 @@
     color: #000000;
 }
 
+.rvsp-date {
+        color: #000000;
+}
+
 .rvsp-link {
     color: #005C80;
+}
+
+.card-margin{
+    margin: 30px;
+}
+
+a.streams-selector {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+
+    /* identical to box height */
+
+    color: #000000;
+}
+
+a.streams-selector.active {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+
+    /* identical to box height */
+
+    color: #000000;
+}
+
+.side-margin-small {
+    margin-left: 20px;
+    margin-right: 20px;
 }

@@ -7,6 +7,7 @@ import {
     CardTitle, CardSubtitle, Button, CardImgOverlay
 } from 'reactstrap';
 import Splash from '../../components/splash/splash';
+import Header from '../../components/header/Header';
 
 class Dashboard extends Component {
     render() {

@@ -14,7 +14,7 @@ class Header extends Component {
                     <SidebarMenu>
                     </SidebarMenu>
                 </div>
-                <div className="logo-container"><img className="logo-image" width="200px" src={require('../../assets/images/logo.svg')} /></div>
+                <div className="logo-container"><img className="logo-image" width="200px" src={require('../../assets/images/logo-main.svg')} /></div>
                 <div className="notifications">
                     <SidebarMenuNotifications>
                     </SidebarMenuNotifications>

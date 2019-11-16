@@ -8,6 +8,7 @@ import {
   CardTitle, CardSubtitle, CardImgOverlay
 } from 'reactstrap';
 import './Streams.css';
+import { NavLink } from 'react-router-dom';
 
 
 function StreamList() {
@@ -33,12 +34,15 @@ function StreamList() {
     <a href={"/stream/" + streamId}>
       <div className="online-streams break-after-medium">
         <Card>
-          <CardImg class="" top width="100%" src={require('../../assets/images/stream' + streamId + '.jpg')} alt={name} />
-          <CardTitle>{name}</CardTitle>
-          <CardSubtitle>{description}</CardSubtitle>
 
-          <div className="single-line">
-            <span className="alignleft">{date}</span>
+          <CardImg class="" top width="100%" src={require('../../assets/images/stream' + streamId + '.jpg')} alt={name} />
+          <div className="break-after-medium card-margin">
+            <CardTitle>{name}</CardTitle>
+            <CardSubtitle>{description}</CardSubtitle>
+          </div>
+
+          <div className="single-line card-margin">
+            <span className="alignleft rvsp-date">{date}</span>
             <span className="rvsp-link alignright">RVSP ></span>
             <div className="clear"></div>
           </div>
@@ -50,10 +54,14 @@ function StreamList() {
 
 class Streams extends Component {
 
-
   render() {
     return (
       <div className="dashboard-container">
+        <div className="single-line break-after-medium side-margin-small">
+          <NavLink to={'/streams/upcoming'} activeClassName="active" className="streams-selector alignleft">Upcoming Streams</NavLink>
+          <NavLink to={'/streams/recordings'} activeClassName="active" className="streams-selector alignright">Stream Recordings</NavLink>
+          <div className="clear"></div>
+        </div>
         <ApolloProvider client={ReactApolloClient}>
           <StreamList />
         </ApolloProvider>
