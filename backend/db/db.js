@@ -41,6 +41,10 @@ var Users = Conn.define('users', {
         type: Sequelize.STRING,
         allowNull: true
     },
+    online: {
+        type: Sequelize.STRING,
+        allowNull: true
+    },
     defaultLanguageId: {
         type: Sequelize.INTEGER,
         allowNull: true
@@ -159,6 +163,32 @@ var Communities = Conn.define('communities', {
     }
 })
 
+var CommunityMembers = Conn.define('communityMembers', {
+    communityMemberId: {
+        type: Sequelize.INTEGER,
+        allowNull: true,
+        primaryKey: true,
+        autoIncrement: true,
+        primaryKey: !0
+    },
+    communityId: {
+        type: Sequelize.INTEGER,
+        allowNull: true
+    },
+    userId: {
+        type: Sequelize.INTEGER,
+        allowNull: true
+    },
+    name: {
+        type: Sequelize.STRING,
+        allowNull: true
+    },
+    active: {
+        type: Sequelize.STRING,
+        allowNull: true
+    }
+})
+
 var Consultants = Conn.define('consultans', {
     consultantId: {
         type: Sequelize.INTEGER,
@@ -167,14 +197,122 @@ var Consultants = Conn.define('consultans', {
         autoIncrement: true,
         primaryKey: !0
     },
-    user: Users,
-    community: Communities,
+    userId: {
+        type: Sequelize.INTEGER,
+        allowNull: true
+    },
+    communityId: {
+        type: Sequelize.INTEGER,
+        allowNull: true
+    },
     active: {
         type: Sequelize.STRING,
         allowNull: true
-    },
-
+    }
 })
 
+var News = Conn.define('news', {
+    newsId: {
+        type: Sequelize.INTEGER,
+        allowNull: true,
+        primaryKey: true,
+        autoIncrement: true,
+        primaryKey: !0
+    },
+    languageId: {
+        type: Sequelize.INTEGER,
+        allowNull: true
+    },
+    userId: {
+        type: Sequelize.INTEGER,
+        allowNull: true
+    },
+    title: {
+        type: Sequelize.STRING,
+        allowNull: true
+    },
+    content: {
+        type: Sequelize.STRING,
+        allowNull: true
+    },
+    firstPage: {
+        type: Sequelize.STRING,
+        allowNull: true
+    },
+    active: {
+        type: Sequelize.STRING,
+        allowNull: true
+    }
+})
+
+var Consultants = Conn.define('consultans', {
+    consultantId: {
+        type: Sequelize.INTEGER,
+        allowNull: true,
+        primaryKey: true,
+        autoIncrement: true,
+        primaryKey: !0
+    },
+    userId: {
+        type: Sequelize.INTEGER,
+        allowNull: true
+    },
+    communityId: {
+        type: Sequelize.INTEGER,
+        allowNull: true
+    },
+    active: {
+        type: Sequelize.STRING,
+        allowNull: true
+    }
+})
+
+var Feedbacks = Conn.define('feedbacks', {
+    feedbackId: {
+        type: Sequelize.INTEGER,
+        allowNull: true,
+        primaryKey: true,
+        autoIncrement: true,
+        primaryKey: !0
+    },
+    consultantId: {
+        type: Sequelize.INTEGER,
+        allowNull: true
+    },
+    userId: {
+        type: Sequelize.INTEGER,
+        allowNull: true
+    },
+    communityId: {
+        type: Sequelize.INTEGER,
+        allowNull: true
+    },
+    rating: {
+        type: Sequelize.INTEGER,
+        allowNull: true
+    },
+    active: {
+        type: Sequelize.STRING,
+        allowNull: true
+    }
+})
+
+var Interactions = Conn.define('insteractions', {
+    interactionId: {
+        type: Sequelize.INTEGER,
+        allowNull: true,
+        primaryKey: true,
+        autoIncrement: true,
+        primaryKey: !0
+    },
+    consultantId: {
+        type: Sequelize.INTEGER,
+        allowNull: true
+    },
+    userId: {
+        type: Sequelize.INTEGER,
+        allowNull: true
+    }
+})
 
 module.exports = Conn;
