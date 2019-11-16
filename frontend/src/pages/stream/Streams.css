@@ -1,0 +1,26 @@
+.dashboard-container {
+    width: 95%;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.online-streams .card-title {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 25px;
+    text-transform: capitalize;
+    
+    color: #000000;
+}
+
+.online-streams .card-subtitle {
+    font-size: 20px;
+    line-height: 25px;
+    text-transform: capitalize;
+
+    color: #000000;
+}
+
+.rvsp-link {
+    color: #005C80;
+}

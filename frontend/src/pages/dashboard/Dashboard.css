@@ -32,6 +32,26 @@
     font-size: 2em;
 }
 
+.tip-of-the-day {
+    font-style: italic;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 31px;
+
+    color: #00415A;
+}
+
+.dashboard-header {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 25px;
+
+    /* identical to box height */
+
+    color: #000000;
+}
+
 @media screen and (max-width: 600px){
     .card-img-overlay {
         font-size: 0.5em;

@@ -27,3 +27,14 @@
 .container-fluid {
   padding-top: 80px;
 }
+
+.alignleft {
+	float: left;
+}
+.alignright {
+	float: right;
+}
+
+.clear {
+  clear: both;
+}

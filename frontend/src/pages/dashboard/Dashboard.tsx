@@ -6,15 +6,16 @@ import {
     Card, CardImg, CardText, CardBody,
     CardTitle, CardSubtitle, Button, CardImgOverlay
 } from 'reactstrap';
+import Splash from '../../components/splash/splash';
 
 class Dashboard extends Component {
     render() {
         return (
             <div className="dashboard-container">
 
-                <div className="break-after-medium">
+                {/* <div className="break-after-medium">
                     <CarouselStreams></CarouselStreams>
-                </div>
+                </div> */}
 
                 <div className="break-after-medium">
                     <Card>
@@ -30,6 +31,18 @@ class Dashboard extends Component {
                 <div className="break-after-medium">
                     <CarouselLink></CarouselLink>
                 </div>
+
+                <div className="break-after-medium">
+                    <div className="dashboard-header">Scheduled Streams</div>
+                </div>
+
+                <div className="break-after-medium">
+                    <div className="dashboard-header break-after-small" >Tip of the Day</div>
+                    <div className="tip-of-the-day">
+                        The temptation to sin is a given, so don't be surprised by it. ` Expect to be tempted daily, and be prepared for it.
+                    </div>
+                </div>
+
 
             </div>
         );

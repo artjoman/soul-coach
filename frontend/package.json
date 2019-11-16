@@ -9,6 +9,7 @@
     "@types/react-dom": "16.9.4",
     "apollo-boost": "^0.4.4",
     "bootstrap": "^4.3.1",
+    "graphql": "^14.5.8",
     "graphql-tag": "^2.10.1",
     "radium": "^0.26.0",
     "react": "^16.12.0",
@@ -17,6 +18,7 @@
     "react-burger-menu": "^2.6.12",
     "react-cards": "^0.2.2",
     "react-dom": "^16.12.0",
+    "react-lottie": "^1.2.3",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.2.0",
     "react-slick": "^0.25.2",
@@ -29,7 +31,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "generate": "graphql-codegen"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -47,6 +50,9 @@
     ]
   },
   "devDependencies": {
-    "@graphql-codegen/cli": "^1.8.3"
+    "@graphql-codegen/cli": "^1.8.3",
+    "@graphql-codegen/core": "^1.8.3",
+    "@graphql-codegen/typescript-operations": "^1.8.3",
+    "@graphql-codegen/typescript-react-apollo": "^1.8.3"
   }
 }

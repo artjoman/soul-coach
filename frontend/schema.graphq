@@ -1,0 +1,129 @@
+schema {
+  query: query
+  mutation: mutation
+}
+
+"""Communitites object"""
+type communities {
+  communityId: Int
+  languageId: Int
+  userId: Int
+  name: String
+  description: String
+  image: String
+  active: String
+}
+
+"""Community member object"""
+type communityMembers {
+  communtyMemberId: Int
+  communtyId: Int
+  userId: Int
+  active: String
+}
+
+"""Consultant object"""
+type consultants {
+  consultantId: Int
+  userId: Int
+  communityId: Int
+  active: String
+}
+
+"""Feedback object"""
+type feedback {
+  feedbackId: Int
+  consultantId: Int
+  userId: Int
+  communityId: Int
+  rating: Int
+  active: String
+}
+
+"""Interaction object"""
+type interactions {
+  interactionId: Int
+  consultantId: Int
+  userId: Int
+}
+
+"""Language object"""
+type language {
+  languageId: Int
+  name: String
+  active: String
+}
+
+"""Data update functions"""
+type mutation {
+  addUser(email: String!, defaultLanguage: Int!, consent: String!, password: String): users
+  updateUser(userId: Int!, email: String!, defaultLanguage: Int!, consent: String!, online: String!, password: String): users
+  addProperty(userId: Int!, key: String!, value: String!, active: String): userProperties
+  updateProperty(userPropertiesId: Int!, key: String!, value: String!, active: String): userProperties
+  addStream(communityId: Int!, consultantId: Int!, streamLink: String!, name: String!, description: String!, active: String): streams
+  updateStream(streamId: Int!, streamLink: String!, name: String!, description: String!, active: String): streams
+  addCommunity(languageId: Int!, userId: Int!, image: String, name: String!, description: String, active: String): communities
+  updateCommunity(communityId: Int!, image: String, name: String!, description: String, active: String): communities
+  addConsultant(userId: Int!, communityId: Int!, active: String): consultants
+  updateConsultant(consultantId: Int!, communityId: Int!, active: String): consultants
+  addCommunityMember(userId: Int!, communityId: Int!, active: String): communityMembers
+  updateCommunityMember(communityMemberId: Int!, active: String): communityMembers
+  addNews(languageId: Int!, userId: Int!, title: String!, content: String!, active: String): news
+  updateNews(newsId: Int!, userId: Int!, title: String, content: String, active: String): news
+  addFeedback(consultantId: Int, userId: Int, communityId: Int, rating: Int!, active: String): feedback
+  addInteraction(consultantId: Int!, userId: Int!): interactions
+}
+
+"""News object"""
+type news {
+  newsId: Int
+  languageId: Int
+  userId: Int
+  title: String
+  content: String
+  active: String
+  firstPage: String
+}
+
+"""Root query object"""
+type query {
+  users(userId: Int, password: String): [users]
+  userProperties(userId: Int): [userProperties]
+  streams(consultantId: Int, streamId: Int, communityId: Int): [streams]
+  consultants(communityId: Int, userId: Int): [consultants]
+  communities(communityId: Int, languageId: Int): [communities]
+  communityMembers(communityId: Int, userId: Int): [communityMembers]
+  language: [language]
+  news(languageId: Int, userId: Int): [news]
+  interactions(userId: Int, consultantId: Int): [news]
+}
+
+"""Stream object"""
+type streams {
+  streamId: Int
+  consultantId: Int
+  communityId: Int
+  streamLink: String
+  name: String
+  description: String
+  active: String
+}
+
+"""User property object"""
+type userProperties {
+  userPropertiesId: Int
+  userId: Int
+  key: String
+  value: String
+  active: String
+}
+
+"""Users object"""
+type users {
+  userId: Int
+  email: String
+  defaultLanguage: Int
+  consent: String
+  active: String
+}
+
