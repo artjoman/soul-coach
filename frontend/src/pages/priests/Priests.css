@@ -1,0 +1,38 @@
+.priests-container {
+    width: 95%;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.online-priests .card-title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+
+    color: #000000;
+    text-align: center;
+
+    margin-top: 10px;
+}
+
+.card-image {
+    width: 151px;
+    height: 127px;
+}
+
+.card-title {
+    color: white;
+    font-size: 3em;
+}
+
+.card-subtitle {
+    color: green;
+    font-size: 2em;
+}
+
+@media screen and (max-width: 600px){
+    .card-img-overlay {
+        font-size: 0.5em;
+    }
+}
