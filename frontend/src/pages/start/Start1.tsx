@@ -1,14 +1,7 @@
 import React, { Component } from 'react';
 import './Start1.css';
-import { useHistory } from "react-router-dom"
 
 class Start1 extends Component {
-
-    history = useHistory();
-
-    handleClick() {
-        history.push("/start2");
-    }
 
     render() {
         return (
