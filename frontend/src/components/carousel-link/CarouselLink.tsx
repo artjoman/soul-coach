@@ -6,11 +6,12 @@ import {
     CardTitle, CardSubtitle, CardImgOverlay
 } from 'reactstrap';
 import ReactSlick from 'react-slick';
+import { NavLink } from 'react-router-dom';
 
 import './CarouselLink.css';
 
 const settings = {
-    
+
     dots: true,
     infinite: false,
     centerMode: false,
@@ -51,8 +52,8 @@ class CarouselLink extends Component {
                     <div className="who-is-online">
                         <Card body inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
                             <CardSubtitle className="centered subtitle" >See who is <b>online</b>
-                            
-                            </CardSubtitle>  
+
+                            </CardSubtitle>
                             <img width="30px" src={require('../../assets/images/arrow.svg')} alt="Soul Coach Link arrow" />
                         </Card>
                     </div>
@@ -87,8 +88,10 @@ class CarouselLink extends Component {
                         </Card>
                     </div>
                 </ReactSlick>
-
-                <div className="see-all-link">SEE ALL ></div>
+                <NavLink to={'/priests'} activeClassName="active" className="streams-selector alignright">
+                    <div className="see-all-link">SEE ALL >
+                    </div>
+                </NavLink>
             </div>
         );
     }
