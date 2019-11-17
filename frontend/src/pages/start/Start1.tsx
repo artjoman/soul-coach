@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
 import './Start1.css';
+import { withRouter } from "react-router-dom";
 
 class Start1 extends Component {
 
+    handleClick = () => {
+        window.location.href = '/_start2';
+    }
+
     render() {
         return (
-            <div className="start-container">
+            <div className="start-container" onClick={this.handleClick}>
 
                 <div className="break-after-large">
                     This is <b>not</b> a psychological therapy.
@@ -25,4 +30,4 @@ class Start1 extends Component {
     }
 }
 
-export default Start1;
+export default withRouter(Start1);
