@@ -12,19 +12,33 @@ class Start1 extends Component {
         return (
             <div className="start-container" onClick={this.handleClick}>
 
-                <div className="break-after-large">
-                    This is <b>not</b> a psychological therapy.
+                <div className="break-after-medium single-line fixed-width">
+                    <span className="flex flex-image"><img src={require('./../../assets/images/catholic.svg')} /></span>
+                    <span className="flex selector-subtitle">Catholic</span>
                 </div>
-                <div className="break-after-large">Soul Coach is based on
-                    <b>religious support approach.</b>
+                <div className="break-after-medium single-line fixed-width">
+                    <span className="flex flex-image"><img src={require('./../../assets/images/Lutheran.svg')} /></span>
+                    <span className="flex selector-subtitle">Lutheran</span>
+                </div>
+                <div className="break-after-medium single-line fixed-width">
+                    <span className="flex flex-image"><img src={require('./../../assets/images/Orthodox.svg')} /></span>
+                    <span className="flex selector-subtitle">Orthodox</span>
+                </div>
+                <div className="break-after-medium single-line fixed-width">
+                    <span className="flex flex-image"><img src={require('./../../assets/images/Islam.svg')} /></span>
+                    <span className="flex selector-subtitle">Islam</span>
+                </div>
+                <div className="break-after-large single-line fixed-width">
+                    <span className="flex flex-image"><img src={require('./../../assets/images/Judaism.svg')} /></span>
+                    <span className="flex selector-subtitle">Judaism</span>
+                </div>
+                <div className="break-after-medium single-line fixed-width">
+                    ...
+                </div>
+                <div className="break-after-medium single-line fixed-width">
+                    more to come soon!
                 </div>
 
-                <div className="break-after-large">
-                    This is a platform based on <b>your religion.</b>
-                </div>
-                <div className="break-after-large">
-                    We help you to <b>build, reconnect or strengthen</b> the relationship with your religious community.
-                    </div>
             </div>
         );
     }

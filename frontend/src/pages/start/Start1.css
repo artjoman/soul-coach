@@ -1,3 +1,14 @@
 .start-container {
     text-align: center;
+    cursor: pointer;
+}
+
+.selector-subtitle {
+    font-size: 1.5em;
+    margin-right: 12px;
+    width: 100px;
+}
+
+.flex-image {
+    margin-right: 12px;
 }
