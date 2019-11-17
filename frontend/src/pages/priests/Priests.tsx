@@ -16,6 +16,27 @@ class Priests extends Component {
                             <CardSubtitle>Online</CardSubtitle>
                         </Card>
                     </div>
+                    <div className="online-priests">
+                        <Card>
+                            <CardImg className="card-image" src={require('../../assets/images/priest1.png')} alt="Father Samuel" />
+                            <CardTitle>Father Samuel</CardTitle>
+                            <CardSubtitle>Online</CardSubtitle>
+                        </Card>
+                    </div>
+                    <div className="online-priests">
+                        <Card>
+                            <CardImg className="card-image" src={require('../../assets/images/priest1.png')} alt="Father Samuel" />
+                            <CardTitle>Father Samuel</CardTitle>
+                            <CardSubtitle>Online</CardSubtitle>
+                        </Card>
+                    </div>
+                    <div className="online-priests">
+                        <Card>
+                            <CardImg className="card-image" src={require('../../assets/images/priest1.png')} alt="Father Samuel" />
+                            <CardTitle>Father Samuel</CardTitle>
+                            <CardSubtitle>Online</CardSubtitle>
+                        </Card>
+                    </div>
             </div>
         );
     }

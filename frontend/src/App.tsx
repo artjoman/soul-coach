@@ -6,18 +6,23 @@ import Priests from './pages/priests/Priests';
 import Header from './components/header/Header';
 import HeaderWhite from './components/header-white/HeaderWhite';
 import Streams from './pages/stream/Streams';
+import Start1 from './pages/start/Start1';
 
 function AppRouter() {
   return (
     <div className="App">
-      
+
       <Router>
-        <Route exact path="/" component={Header} /> 
-        <Route path="/" component={HeaderWhite} /> 
+        <Route exact path="/" component={Header} />
+        <Route path="/([a-zA-Z0-9]+)" component={HeaderWhite} />
         <div className="container-fluid">
           <Route path="/" exact component={Dashboard} />
           <Route path="/streams" component={Streams} />
+<<<<<<< HEAD
           <Route path="/priests" component={Priests} />
+=======
+          <Route path="/_start1" component={Start1} />
+>>>>>>> 16128ff484a918a53a6deb4803ff9c3a974746d4
         </div>
       </Router>
     </div>

@@ -38,3 +38,9 @@
 .clear {
   clear: both;
 }
+
+
+/* CARD override*/
+.card {
+  border: 1px solid rgba(0,0,0,.5) !important;
+}

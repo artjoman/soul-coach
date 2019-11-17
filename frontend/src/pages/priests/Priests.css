@@ -1,5 +1,5 @@
 .priests-container {
-    width: 95%;
+    width: 30%;
     max-width: 1080px;
     margin: 0 auto;
 }
@@ -28,7 +28,8 @@
 
 .card-subtitle {
     color: green;
-    font-size: 2em;
+    text-align: center;
+    font-size: 1em;
 }
 
 @media screen and (max-width: 600px){
