@@ -18,11 +18,8 @@ function AppRouter() {
         <div className="container-fluid">
           <Route path="/" exact component={Dashboard} />
           <Route path="/streams" component={Streams} />
-<<<<<<< HEAD
           <Route path="/priests" component={Priests} />
-=======
           <Route path="/_start1" component={Start1} />
->>>>>>> 16128ff484a918a53a6deb4803ff9c3a974746d4
         </div>
       </Router>
     </div>
